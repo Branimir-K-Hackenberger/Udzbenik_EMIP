@@ -1,0 +1,66 @@
+\babel@toc {croatian}{}\relax 
+\contentsline {part}{I\hspace {1em}Osnove i matematički okvir}{1}{part.1}%
+\contentsline {chapter}{\numberline {1}Uvod u ekološko modeliranje}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Što je ekološko modeliranje?}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Definicije, opseg i uloga}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Povijesni pregled}{3}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Matematičke i statističke osnove}{4}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Linearna algebra i matrični modeli}{4}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Diferencijalne i diskretne jednadžbe}{4}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Vjerojatnost, statistika i stohastičnost}{4}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Računalni alati}{4}{section.2.4}%
+\contentsline {part}{II\hspace {1em}Populacije, zajednice i ekosustavi}{5}{part.2}%
+\contentsline {chapter}{\numberline {3}Modeli populacijske dinamike}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Jednostavni modeli}{6}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Dobno/stanovno strukturirani modeli}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Metapopulacijski modeli}{6}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Međuspecijske interakcije i modeli zajednica}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Grabljivac--plijen i funkcijski odgovori}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Konkurencija i koegzistencija}{7}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Ekološke mreže i stabilnost zajednica}{7}{section.4.3}%
+\contentsline {chapter}{\numberline {5}Modeli ekosustava i bioenergetika}{8}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kruženje tvari i energije}{8}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Bioenergetski i DEB modeli}{8}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Ecosystem services}{8}{section.5.3}%
+\contentsline {part}{III\hspace {1em}Prostor, predviđanje i AI}{9}{part.3}%
+\contentsline {chapter}{\numberline {6}Prostorno-ekološko modeliranje}{10}{chapter.6}%
+\contentsline {section}{\numberline {6.1}GIS, daljinska istraživanja i skale}{10}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Modeli rasprostiranja vrsta (SDM/ENM)}{10}{section.6.2}%
+\contentsline {section}{\numberline {6.3}IBM modeli}{10}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Prediktivno modeliranje i scenariji}{11}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Scenariji klimatskih promjena}{11}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Predviđanje invazija i rani sustavi upozorenja}{11}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Spajanje mehanističkih i statističkih pristupa}{11}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Statistički i AI pristupi}{12}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Klasična i Bayesovska statistika}{12}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Strojno učenje}{12}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Duboko učenje i digitalni blizanci ekosustava}{12}{section.8.3}%
+\contentsline {part}{IV\hspace {1em}Validacija, nesigurnost i primjene}{13}{part.4}%
+\contentsline {chapter}{\numberline {9}Validacija, verifikacija i osjetljivost}{14}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Kalibracija i verifikacija}{14}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Analize osjetljivosti i robustnosti}{14}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Etika i komunikacija nesigurnosti}{14}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Primjene u upravljanju okolišem}{15}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Zaštita prirode i bioraznolikosti}{15}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Poljoprivreda i šumarstvo}{15}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Ekotoksikologija i procjena rizika}{15}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Klimatske politike i održivi razvoj}{15}{section.10.4}%
+\contentsline {part}{V\hspace {1em}Studije slučaja i praktične vježbe}{16}{part.5}%
+\contentsline {chapter}{\numberline {11}Studije slučaja}{17}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Gujavice u agroekosustavima}{17}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Širenje komaraca}{17}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Eutrofikacija riječnog ekosustava}{17}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Fragmentacija šuma i ptice metapopulacija}{17}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Bayesove mreže u ekotoksikologiji}{17}{section.11.5}%
+\contentsline {chapter}{\numberline {12}Praktične vježbe (\textsf {R}{} i \textsf {Python}{})}{18}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Uvod u \textsf {R}{} i \textsf {Python}{} alate}{18}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Leslie matrica u \textsf {R}{}}{18}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Lotka--Volterra simulacija u \textsf {Python}{}}{18}{section.12.3}%
+\contentsline {section}{\numberline {12.4}SDM u \textsf {R}{} (skica s \texttt {dismo})}{19}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Random Forest za invazije}{19}{section.12.5}%
+\contentsline {section}{\numberline {12.6}DEB simulacije (skica)}{20}{section.12.6}%
+\contentsline {chapter}{\numberline {A}Matematički prilozi}{21}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Osnovni populacijski modeli}{21}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Instalacija softvera}{22}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Primjeri koda}{23}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Rječnik pojmova}{24}{appendix.D}%

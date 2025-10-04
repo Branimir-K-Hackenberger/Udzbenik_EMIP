@@ -1,0 +1,586 @@
+\documentclass[12pt,a4paper,twoside]{book}
+
+% Paketi za hrvatski jezik
+\usepackage[utf8]{inputenc}
+\usepackage[croatian]{babel}
+\usepackage[T1]{fontenc}
+
+% Ostali potrebni paketi
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+% Postavke stranice
+\geometry{
+	left=3cm,
+	right=2.5cm,
+	top=2.5cm,
+	bottom=2.5cm,
+	headheight=16pt
+}
+
+% Postavke za kodove
+\lstset{
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	commentstyle=\color{gray},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny,
+	breaklines=true,
+	frame=single,
+	language=R
+}
+
+% Hyperref postavke
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+	citecolor=red,
+	pdftitle={Ekološko modeliranje i predviđanje},
+	pdfauthor={Autor},
+	pdfsubject={Ekologija, Modeliranje},
+	pdfkeywords={ekologija, modeliranje, predviđanje, bioraznolikost}
+}
+
+% Zaglavlja i podnožja
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\rightmark}
+\fancyhead[RE]{\leftmark}
+
+% Naslovni stil
+\titleformat{\chapter}[display]
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{50pt}{40pt}
+
+\begin{document}
+	
+	%% NASLOVNICA
+	\begin{titlepage}
+		\centering
+		\vspace*{2cm}
+		
+		{\huge\bfseries Ekološko modeliranje i predviđanje}
+		
+		\vspace{1.5cm}
+		
+		{\Large Udžbenik za studente ekologije, biologije i znanosti o okolišu}
+		
+		\vspace{3cm}
+		
+		{\large Autor}
+		
+		\vspace{2cm}
+		
+		% \includegraphics[width=0.3\textwidth]{logo.png} % Ukloniti komentar i dodati logo
+		
+		\vspace{2cm}
+		
+		{\large Sveučilište}\\
+		{\large Fakultet}\\
+		{\large Godina}
+		
+	\end{titlepage}
+	
+	%% SADRŽAJ
+	\frontmatter
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	%% PREDGOVOR
+	\chapter*{Predgovor}
+	\addcontentsline{toc}{chapter}{Predgovor}
+	
+	Ekološko modeliranje predstavlja ključnu metodologiju za razumijevanje složenih procesa u prirodi i predviđanje budućih promjena u ekološkim sustavima. Ovaj udžbenik nastao je s ciljem pružanja sveobuhvatnog uvida u teorijske osnove i praktične aplikacije modeliranja u ekologiji.
+	
+	Udžbenik je namijenjen studentima preddiplomskih i diplomskih studija ekologije, biologije, znanosti o okolišu te srodnih disciplina. Također može služiti kao referentni materijal za istraživače i praktičare koji se bave zaštitom okoliša i upravljanjem prirodnim resursima.
+	
+	\mainmatter
+	
+	%% DIO I: OSNOVE EKOLOŠKOG MODELIRANJA
+	\part{Osnove ekološkog modeliranja}
+	
+	\chapter{Uvod u ekološko modeliranje}
+	
+	\section{Što je ekološko modeliranje?}
+	
+	Ekološko modeliranje predstavlja interdisciplinarnu znanstvenu metodologiju koja koristi matematičke, statističke i računalne alate za opisivanje, razumijevanje i predviđanje ekoloških procesa i obrazaca.
+	
+	\subsection{Definicija i opseg}
+	Model u ekologiji možemo definirati kao pojednostavljenu reprezentaciju stvarnog ekološkog sustava koja nam omogućuje:
+	\begin{itemize}
+		\item Testiranje hipoteza o funkcioniranju ekoloških procesa
+		\item Predviđanje odgovora sustava na promjene
+		\item Integraciju znanja iz različitih izvora
+		\item Identifikaciju ključnih procesa i varijabli
+	\end{itemize}
+	
+	\subsection{Matematički okvir}
+	Osnovni matematički pristup ekološkom modeliranju možemo izraziti kao:
+	\begin{equation}
+		\frac{dN}{dt} = f(N, t, \theta, \epsilon)
+	\end{equation}
+	gdje je $N$ varijabla stanja (npr. broj jedinki), $t$ vrijeme, $\theta$ parametri modela, a $\epsilon$ stohastička komponenta.
+	
+	\section{Povijesni razvoj ekološkog modeliranja}
+	
+	\subsection{Pioniri ekološkog modeliranja}
+	\begin{description}
+		\item[Malthus (1798)] Prvi eksponencijalni model rasta populacije
+		\item[Verhulst (1838)] Logistički model rasta
+		\item[Lotka-Volterra (1925-1926)] Modeli grabljivac-plijen
+		\item[Leslie (1945)] Matrični modeli populacije
+	\end{description}
+	
+	\section{Vrste ekoloških modela}
+	
+	\subsection{Klasifikacija prema pristupu}
+	\begin{enumerate}
+		\item \textbf{Empirijski modeli} - temelje se na statističkim odnosima u podacima
+		\item \textbf{Mehanistički modeli} - uključuju eksplicitne ekološke procese
+		\item \textbf{Fenomenološki modeli} - opisuju obrasce bez eksplicitnih mehanizama
+	\end{enumerate}
+	
+	\subsection{Klasifikacija prema vremenu}
+	\begin{itemize}
+		\item Statički modeli
+		\item Dinamički modeli
+		\item Stohastički modeli
+	\end{itemize}
+	
+	\section{Uloga modeliranja u ekološkim istraživanjima}
+	
+	Modeliranje u ekologiji služi nekoliko ključnih funkcija:
+	
+	\begin{table}[H]
+		\centering
+		\caption{Funkcije ekološkog modeliranja}
+		\begin{tabular}{@{}ll@{}}
+			\toprule
+			Funkcija & Opis \\
+			\midrule
+			Deskriptivna & Opisivanje postojećih obrazaca \\
+			Eksplanatorna & Objašnjavanje uzročno-posljedičnih veza \\
+			Prediktivna & Predviđanje budućih stanja \\
+			Preskriptivna & Preporučivanje upravljačkih mjera \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	\section{Etičke i metodološke napomene}
+	
+	\subsection{Odgovornost modelara}
+	Znanstvenici koji razvijaju ekološke modele trebaju:
+	\begin{itemize}
+		\item Jasno komunicirati ograničenja modela
+		\item Transparentno prikazivati nesigurnosti
+		\item Izbjegavati prekompliciranje bez opravdanja
+		\item Validirati modele na nezavisnim podacima
+	\end{itemize}
+	
+	\chapter{Matematičke osnove}
+	
+	\section{Linearna algebra u ekologiji}
+	
+	\subsection{Matrični modeli populacije}
+	Leslie matrica za strukturirane populacije:
+	\begin{equation}
+		\mathbf{n}_{t+1} = \mathbf{L} \mathbf{n}_t
+	\end{equation}
+	
+	gdje je:
+	\begin{equation}
+		\mathbf{L} = \begin{pmatrix}
+			F_1 & F_2 & F_3 & \cdots & F_n \\
+			P_1 & 0 & 0 & \cdots & 0 \\
+			0 & P_2 & 0 & \cdots & 0 \\
+			\vdots & \vdots & \ddots & \ddots & \vdots \\
+			0 & 0 & 0 & P_{n-1} & 0
+		\end{pmatrix}
+	\end{equation}
+	
+	\subsection{Vlastite vrijednosti i vektori}
+	Dominantna vlastita vrijednost $\lambda_1$ predstavlja asimptotsku stopu rasta populacije:
+	\begin{equation}
+		\lambda_1 = \lim_{t \to \infty} \frac{N_{t+1}}{N_t}
+	\end{equation}
+	
+	\section{Diferencijalne jednadžbe}
+	
+	\subsection{Obične diferencijalne jednadžbe}
+	Osnovni oblik:
+	\begin{equation}
+		\frac{dy}{dt} = f(t, y)
+	\end{equation}
+	
+	\subsection{Logistički rast}
+	\begin{equation}
+		\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)
+	\end{equation}
+	
+	Rješenje:
+	\begin{equation}
+		N(t) = \frac{K}{1 + \left(\frac{K-N_0}{N_0}\right)e^{-rt}}
+	\end{equation}
+	
+	\section{Teorija vjerojatnosti i statistika}
+	
+	\subsection{Osnovni koncepti}
+	\begin{itemize}
+		\item Slučajne varijable i distribucije
+		\item Bayesovska vs. frekventistička statistika
+		\item Maximum likelihood procjena
+		\item Interval povjerenja vs. kredibilni interval
+	\end{itemize}
+	
+	\subsection{Stohastičnost u ekološkim modelima}
+	Tri tipa stohastičnosti:
+	\begin{enumerate}
+		\item \textbf{Demografska stohastičnost} - varijabilnost na razini pojedinaca
+		\item \textbf{Okolišna stohastičnost} - varijabilnost parametara kroz vrijeme
+		\item \textbf{Stohastičnost katastrofa} - rijetki događaji velikog utjecaja
+	\end{enumerate}
+	
+	\chapter{Tipovi ekoloških modela}
+	
+	\section{Empirijski modeli}
+	
+	Empirijski modeli oslanjaju se primarno na statističke odnose u podacima bez eksplicitnog modeliranja ekoloških procesa.
+	
+	\subsection{Regresijski modeli}
+	\begin{equation}
+		y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_p x_p + \epsilon
+	\end{equation}
+	
+	\subsection{Generalizirani linearni modeli (GLM)}
+	\begin{equation}
+		g(\mu_i) = \mathbf{x}_i^T \boldsymbol{\beta}
+	\end{equation}
+	
+	gdje je $g$ link funkcija, $\mu_i = E[Y_i]$, a $\mathbf{x}_i$ vektor kovarijata.
+	
+	\section{Mehanistički modeli}
+	
+	Mehanistički modeli eksplicitno uključuju ekološke procese kao što su rođenje, smrt, migracija i interakcije između vrsta.
+	
+	\subsection{Prednosti mehanističkih modela}
+	\begin{itemize}
+		\item Bolje razumijevanje uzročno-posljedičnih veza
+		\item Mogućnost ekstrapolacije izvan raspon podataka
+		\item Testiranje različitih scenarija
+		\item Identificiranje ključnih procesa
+	\end{itemize}
+	
+	\subsection{Izazovi}
+	\begin{itemize}
+		\item Složenost parametrizacije
+		\item Potreba za detaljnim podacima
+		\item Računalna zahtjevnost
+		\item Nesigurnost parametara
+	\end{itemize}
+	
+	%% DIO II: MODELI POPULACIJSKE DINAMIKE
+	\part{Modeli populacijske dinamike}
+	
+	\chapter{Jednostavni populacijski modeli}
+	
+	\section{Eksponencijalni rast}
+	
+	Najjednostavniji model kontinuiranog rasta populacije:
+	\begin{equation}
+		\frac{dN}{dt} = rN
+	\end{equation}
+	
+	Rješenje:
+	\begin{equation}
+		N(t) = N_0 e^{rt}
+	\end{equation}
+	
+	\subsection{Diskretni eksponencijalni model}
+	\begin{equation}
+		N_{t+1} = \lambda N_t
+	\end{equation}
+	
+	gdje je $\lambda = e^r$ konačna stopa rasta.
+	
+	\section{Logistički rast}
+	
+	Model koji uključuje nosivost staništa:
+	\begin{equation}
+		\frac{dN}{dt} = rN\left(1 - \frac{N}{K}\right)
+	\end{equation}
+	
+	\subsection{Stabilnost ravnotežnih točaka}
+	\begin{itemize}
+		\item $N^* = 0$ (nestabilna ravnoteža)
+		\item $N^* = K$ (stabilna ravnoteža)
+	\end{itemize}
+	
+	\section{Diskretni populacijski modeli}
+	
+	\subsection{Generalizirani diskretni model}
+	\begin{equation}
+		N_{t+1} = f(N_t)
+	\end{equation}
+	
+	\subsection{Ricker model}
+	\begin{equation}
+		N_{t+1} = N_t e^{r(1-N_t/K)}
+	\end{equation}
+	
+	\subsection{Beverton-Holt model}
+	\begin{equation}
+		N_{t+1} = \frac{\lambda N_t}{1 + \frac{\lambda - 1}{K}N_t}
+	\end{equation}
+	
+	\chapter{Međuspecijske interakcije}
+	
+	\section{Modeli grabljivac-plijen}
+	
+	\subsection{Lotka-Volterra model}
+	Sustav jednadžbi:
+	\begin{align}
+		\frac{dN}{dt} &= rN - aNP \\
+		\frac{dP}{dt} &= eaNP - mP
+	\end{align}
+	
+	gdje su:
+	\begin{itemize}
+		\item $N$ - gustoća plijena
+		\item $P$ - gustoća grabljivca
+		\item $r$ - intrinzična stopa rasta plijena
+		\item $a$ - stopa napada
+		\item $e$ - efikasnost konverzije
+		\item $m$ - stopa smrtnosti grabljivca
+	\end{itemize}
+	
+	\subsection{Holling funkcijska odgovor}
+	Tip I (linearan):
+	\begin{equation}
+		f(N) = aN
+	\end{equation}
+	
+	Tip II (zasićen):
+	\begin{equation}
+		f(N) = \frac{aN}{1 + ahN}
+	\end{equation}
+	
+	Tip III (sigmoidni):
+	\begin{equation}
+		f(N) = \frac{aN^2}{1 + ahN^2}
+	\end{equation}
+	
+	\section{Modeli konkurencije}
+	
+	\subsection{Lotka-Volterra konkurencija}
+	\begin{align}
+		\frac{dN_1}{dt} &= r_1 N_1 \left(1 - \frac{N_1 + \alpha_{12}N_2}{K_1}\right) \\
+		\frac{dN_2}{dt} &= r_2 N_2 \left(1 - \frac{N_2 + \alpha_{21}N_1}{K_2}\right)
+	\end{align}
+	
+	\subsection{Uvjeti koegzistencije}
+	Koegzistencija je moguća kada:
+	\begin{equation}
+		\alpha_{12} < \frac{K_1}{K_2} \quad \text{i} \quad \alpha_{21} < \frac{K_2}{K_1}
+	\end{equation}
+	
+	%% DIO III: PROSTORNI EKOLOŠKI MODELI
+	\part{Prostorni ekološki modeli}
+	
+	\chapter{Uvod u prostorno modeliranje}
+	
+	\section{Prostorna heterogenost u ekologiji}
+	
+	Prostorna heterogenost ključna je karakteristika ekoloških sustava koja utječe na:
+	\begin{itemize}
+		\item Distribuciju vrsta
+		\item Populacijsku dinamiku
+		\item Međuspecijske interakcije
+		\item Procese na razini zajednice
+	\end{itemize}
+	
+	\subsection{Skale prostorne heterogenosti}
+	\begin{table}[H]
+		\centering
+		\caption{Prostorne skale u ekologiji}
+		\begin{tabular}{@{}lll@{}}
+			\toprule
+			Skala & Razmjer & Procesi \\
+			\midrule
+			Lokalna & $<$ 1 km & Mikroklima, konkurencija \\
+			Krajobrazna & 1-100 km & Metapopulacije, fragmentacija \\
+			Regionalna & 100-1000 km & Biogeografija, migracije \\
+			Kontinentalna & $>$ 1000 km & Filogenetska raznolikost \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	\section{GIS i daljinsko istraživanje}
+	
+	\subsection{Geoinformacijski sustavi (GIS)}
+	GIS omogućuje:
+	\begin{itemize}
+		\item Prostornu analizu ekoloških podataka
+		\item Integraciju različitih tipova podataka
+		\item Vizualizaciju prostornih obrazaca
+		\item Modeliranje prostornih procesa
+	\end{itemize}
+	
+	\subsection{Daljinsko istraživanje}
+	Ključni izvori podataka:
+	\begin{itemize}
+		\item Landsat sateliti
+		\item MODIS (Moderate Resolution Imaging Spectroradiometer)
+		\item Sentinel programi
+		\item LIDAR podaci
+	\end{itemize}
+	
+	%% DODATCI
+	\appendix
+	
+	\chapter{Matematički popis formula}
+	
+	\section{Osnovni populacijski modeli}
+	
+	\begin{table}[H]
+		\centering
+		\caption{Pregled osnovnih formula}
+		\begin{tabular}{@{}ll@{}}
+			\toprule
+			Model & Formula \\
+			\midrule
+			Eksponencijalni rast & $\frac{dN}{dt} = rN$ \\
+			Logistički rast & $\frac{dN}{dt} = rN(1-N/K)$ \\
+			Ricker model & $N_{t+1} = N_t e^{r(1-N_t/K)}$ \\
+			Beverton-Holt & $N_{t+1} = \frac{\lambda N_t}{1 + (\lambda-1)N_t/K}$ \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	\chapter{Softverski kodovi i skripte}
+	
+	\section{R kod za logistički rast}
+	
+	\begin{lstlisting}[language=R, caption=Implementacija logističkog modela u R]
+		# Parametri modela
+		r <- 0.1      # Intrinzicka stopa rasta
+		K <- 1000     # Nosivost staništa
+		N0 <- 10      # Pocetna velicina populacije
+		t_max <- 100  # Maksimalno vrijeme
+		
+		# Vremenska serija
+		t <- seq(0, t_max, by = 0.1)
+		
+		# Analiticko rjesenje
+		N_analytical <- K / (1 + ((K - N0) / N0) * exp(-r * t))
+		
+		# Numericka integracija
+		library(deSolve)
+		
+		logistic_model <- function(t, state, parameters) {
+			with(as.list(c(state, parameters)), {
+				dN <- r * N * (1 - N / K)
+				return(list(dN))
+			})
+		}
+		
+		parameters <- c(r = r, K = K)
+		state <- c(N = N0)
+		
+		N_numerical <- ode(y = state, times = t, 
+		func = logistic_model, 
+		parms = parameters)
+		
+		# Vizualizacija
+		plot(t, N_analytical, type = "l", col = "blue", 
+		xlab = "Vrijeme", ylab = "Velicina populacije",
+		main = "Logisticki rast populacije")
+		lines(N_numerical[, "time"], N_numerical[, "N"], 
+		col = "red", lty = 2)
+		legend("bottomright", legend = c("Analiticko", "Numericko"),
+		col = c("blue", "red"), lty = c(1, 2))
+	\end{lstlisting}
+	
+	\chapter{Baze podataka i resursi}
+	
+	\section{Online baze podataka}
+	\begin{itemize}
+		\item GBIF (Global Biodiversity Information Facility)
+		\item WorldClim - klimatski podaci
+		\item IUCN Red List
+		\item eBird
+		\item Ocean Biogeographic Information System (OBIS)
+	\end{itemize}
+	
+	\section{Softverski paketi}
+	\subsection{R paketi}
+	\begin{itemize}
+		\item \texttt{deSolve} - rješavanje diferencijalnih jednadžbi
+		\item \texttt{popbio} - populacijska biologija
+		\item \texttt{dismo} - modeli distribucije vrsta
+		\item \texttt{vegan} - analiza zajednica
+		\item \texttt{adehabitat} - analiza staništa
+	\end{itemize}
+	
+	\chapter{Rječnik pojmova}
+	
+	\begin{description}
+		\item[Bioraznolikost] Varijabilnost živih organizama na genskoj, vrstarskoj i ekosistemskoj razini
+		\item[Nosivost staništa] Maksimalna veličina populacije koju određeno stanište može podržati
+		\item[Metapopulacija] Skup lokalnih populacija povezanih migracijama
+		\item[Ekološka niša] Multidimenzionalni prostor uvjeta i resursa potrebnih vrsti za preživljavanje
+		\item[Stohastičnost] Slučajnost u ekološkim procesima
+	\end{description}
+	
+	%% LITERATURA
+	\backmatter
+	
+	\begin{thebibliography}{99}
+		
+		\bibitem{Caswell2001}
+		Caswell, H. (2001). \textit{Matrix Population Models: Construction, Analysis, and Interpretation}. Sinauer Associates.
+		
+		\bibitem{Gotelli2008}
+		Gotelli, N. J. (2008). \textit{A Primer of Ecology}. Sinauer Associates.
+		
+		\bibitem{Hastings1997}
+		Hastings, A. (1997). \textit{Population Biology: Concepts and Models}. Springer-Verlag.
+		
+		\bibitem{Hilborn1997}
+		Hilborn, R., \& Mangel, M. (1997). \textit{The Ecological Detective: Confronting Models with Data}. Princeton University Press.
+		
+		\bibitem{May2001}
+		May, R. M. (2001). \textit{Stability and Complexity in Model Ecosystems}. Princeton University Press.
+		
+		\bibitem{Odum1971}
+		Odum, E. P. (1971). \textit{Fundamentals of Ecology}. W.B. Saunders Company.
+		
+		\bibitem{Roughgarden1998}
+		Roughgarden, J. (1998). \textit{Primer of Ecological Theory}. Prentice Hall.
+		
+		\bibitem{Tilman1982}
+		Tilman, D. (1982). \textit{Resource Competition and Community Structure}. Princeton University Press.
+		
+	\end{thebibliography}
+	
+\end{document}

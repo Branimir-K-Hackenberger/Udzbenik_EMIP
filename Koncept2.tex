@@ -1,0 +1,144 @@
+\documentclass[12pt,a4paper]{book}
+
+% ====== Paketi ======
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[croatian]{babel}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{caption}
+
+% ====== Postavke ======
+\geometry{margin=2.5cm}
+\onehalfspacing
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+	citecolor=blue,
+	pdftitle={Ekološko modeliranje i predviđanje},
+	pdfauthor={Branimir Hackenberger}
+}
+
+% ====== Okvir za kod ======
+\definecolor{lightgray}{gray}{0.95}
+\lstset{
+	basicstyle=\ttfamily\small,
+	backgroundcolor=\color{lightgray},
+	frame=single,
+	breaklines=true,
+	captionpos=b,
+	numbers=left,
+	numberstyle=\tiny,
+	keywordstyle=\color{blue},
+	commentstyle=\color{green!50!black}
+}
+
+% ====== Naslovnica ======
+\title{\Huge Ekološko modeliranje i predviđanje \\[1cm]
+	\Large Sveučilišni udžbenik}
+\author{Branimir Hackenberger}
+\date{2025}
+
+\begin{document}
+	\maketitle
+	\tableofcontents
+	\chapter*{Predgovor}
+	Razlozi za pisanje udžbenika, ciljana publika, način korištenja.
+	
+	% ====== Glavni dijelovi ======
+	
+	\part{Osnove}
+	\chapter{Uvod u ekološko modeliranje}
+	\section{Što je model?}
+	\section{Povijesni razvoj modeliranja}
+	\section{Vrste modela u ekologiji}
+	\section{Prednosti i ograničenja modela}
+	
+	\chapter{Matematičke i računalne osnove}
+	\section{Osnovne funkcije i jednadžbe}
+	\section{Diferencijalne i diskretne jednadžbe}
+	\section{Matrični modeli (Leslie, Lefkovitch)}
+	\section{Stohastički procesi}
+	\section{Računalni alati (R, Python, Matlab, NetLogo)}
+	
+	\part{Populacije i zajednice}
+	\chapter{Populacijski modeli}
+	\section{Eksponencijalni i logistički rast}
+	\section{Lotka-Volterra modeli}
+	\section{Dobno-strukturni modeli}
+	\section{Metapopulacijski modeli}
+	
+	\chapter{Modeli zajednica}
+	\section{Ekološke mreže}
+	\section{Stabilnost zajednica}
+	\section{Sukcesija i bioraznolikost}
+	
+	\part{Ekosustavi i prostor}
+	\chapter{Modeli ekosustava}
+	\section{Kruženje tvari i energije}
+	\section{Bioenergetski modeli}
+	\section{DEB teorija}
+	\section{Biogeokemijski ciklusi}
+	\section{Ecosystem services modeli}
+	
+	\chapter{Prostorno-ekološki modeli}
+	\section{GIS i prostorna analiza}
+	\section{Modeli rasprostiranja vrsta (SDM, ENM)}
+	\section{Fragmentacija staništa}
+	\section{Individualno temeljeni modeli (IBM)}
+	
+	\part{Predviđanje i primjena}
+	\chapter{Prediktivni modeli i scenariji}
+	\section{Scenariji klimatskih promjena}
+	\section{Predviđanje invazija}
+	\section{Rani sustavi upozorenja}
+	\section{Kombinacija mehanističkih i statističkih modela}
+	
+	\chapter{Statistički i AI pristupi}
+	\section{Frekventistički i Bayesovski modeli}
+	\section{Strojno učenje (RF, XGBoost, SVM)}
+	\section{Duboko učenje i neuronske mreže}
+	\section{Digitalni blizanci ekosustava}
+	
+	\chapter{Validacija i nesigurnost}
+	\section{Kalibracija i verifikacija}
+	\section{Osjetljivost i robusnost modela}
+	\section{Nesigurnost i etika predviđanja}
+	
+	\chapter{Primjene u upravljanju okolišem}
+	\section{Zaštita prirode i bioraznolikosti}
+	\section{Poljoprivreda i šumarstvo}
+	\section{Ekotoksikologija i procjena rizika}
+	\section{Klimatska politika i održivi razvoj}
+	
+	\part{Studije slučaja i praksa}
+	\chapter{Studije slučaja}
+	\section{Modeliranje populacije gujavica u agroekosustavu}
+	\section{Predviđanje širenja komaraca}
+	\section{Eutrofikacija riječnog ekosustava}
+	\section{Fragmentacija šuma i ptice metapopulacija}
+	\section{Bayesove mreže u ekotoksikologiji}
+	
+	\chapter{Praktične vježbe u R-u i Pythonu}
+	\section{Uvod u R i Python}
+	\section{Leslie matrica u R-u}
+	\section{Lotka-Volterra simulacija u Pythonu}
+	\section{SDM u R-u (paket \texttt{dismo})}
+	\section{Random Forest za invazije}
+	\section{DEB simulacije}
+	
+	\appendix
+	\chapter{Dodatci}
+	\section{Matematički prilozi}
+	\section{Upute za instalaciju softvera}
+	\section{Primjeri koda}
+	\section{Literatura i mrežni izvori}
+	
+\end{document}

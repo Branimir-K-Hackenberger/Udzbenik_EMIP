@@ -1,0 +1,33 @@
+\babel@toc {croatian}{}\relax 
+\contentsline {chapter}{Sadr\v {z}aj}{i}{chapter*.1}%
+\contentsline {chapter}{\numberline {1}Uvod u ekološko modeliranje}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Što je ekološki model?}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Povijest ekološkog modeliranja}{1}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Svrha i primjena modela}{1}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Vrste modela}{1}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Matematičke osnove za modeliranje}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Diferencijalne jednadžbe}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Matrična algebra}{3}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Osnove vjerojatnosti i statistike}{3}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Modeli populacijske dinamike}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Eksponencijalni rast}{5}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Logistički rast}{5}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Modeli Lotka-Volterra (predator-plijen)}{5}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Strukturirani modeli populacija}{5}{section.3.4}%
+\contentsline {chapter}{\numberline {4}Modeli interakcija među vrstama}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Kompeticija}{7}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Mutualizam i parazitizam}{7}{section.4.2}%
+\contentsline {chapter}{\numberline {5}Modeli ekosustava}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Protok energije i kruženje tvari}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Modeli hranidbenih mreža}{9}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Prostorni modeli}{9}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Validacija i analiza modela}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Kalibracija modela}{11}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Validacija i verifikacija}{11}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Analiza osjetljivosti i nesigurnosti}{11}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Predviđanje u ekologiji}{13}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Izazovi ekološkog predviđanja}{13}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Modeliranje scenarija}{13}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Primjeri: klimatske promjene i biodiverzitet}{13}{section.7.3}%
+\contentsline {chapter}{\numberline {A}Osnove softvera za modeliranje}{15}{appendix.A}%
+\contentsline {chapter}{Bibliografija}{17}{appendix*.2}%

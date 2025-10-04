@@ -1,0 +1,167 @@
+\documentclass[12pt, a4paper]{book}
+
+% --- PAKETI ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[croatian]{babel}
+\usepackage{amsmath}          % Za napredne matematičke formule
+\usepackage{amssymb}          % Za dodatne matematičke simbole
+\usepackage{graphicx}         % Za umetanje slika
+\usepackage{geometry}         % Za podešavanje margina
+\usepackage{hyperref}         % Za kreiranje linkova unutar dokumenta
+\usepackage{tocbibind}        % Za dodavanje sadržaja, literature itd. u sadržaj
+
+% --- PODEŠAVANJA DOKUMENTA ---
+\geometry{a4paper, top=2.5cm, bottom=2.5cm, left=3cm, right=2.5cm}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=cyan,
+	pdftitle={Ekološko modeliranje i predviđanje},
+	pdfpagemode=FullScreen,
+}
+
+% --- NASLOVNA STRANICA ---
+\title{Ekološko modeliranje i predviđanje}
+\author{Ime Prezime Autora}
+\date{\today}
+
+% --- POČETAK DOKUMENTA ---
+\begin{document}
+	
+	\maketitle
+	\frontmatter % Dio prije glavnog sadržaja (rimski brojevi stranica)
+	
+	\tableofcontents
+	
+	\mainmatter % Glavni sadržaj (arapski brojevi stranica)
+	
+	% --- POGLAVLJE 1: UVOD ---
+	\chapter{Uvod u ekološko modeliranje}
+	
+	\section{Što je ekološki model?}
+	Ekološki model je apstraktna, obično matematička, reprezentacija ekološkog sustava. Cilj modela je pojednostaviti složene interakcije u prirodi kako bi se lakše razumjele, analizirale i predvidjele. Modeli mogu varirati od jednostavnih jednadžbi koje opisuju rast populacije do složenih simulacija koje obuhvaćaju cijele ekosustave.
+	
+	\section{Povijest ekološkog modeliranja}
+	Povijest ekološkog modeliranja seže u rano 20. stoljeće s radovima Lotke i Volterre na modelima predator-plijen. Razvoj računalne tehnologije u drugoj polovici 20. stoljeća omogućio je razvoj znatno složenijih simulacijskih modela.
+	
+	\section{Svrha i primjena modela}
+	Modeli se u ekologiji koriste za:
+	\begin{itemize}
+		\item Razumijevanje temeljnih ekoloških procesa.
+		\item Predviđanje budućih stanja ekosustava (npr. utjecaj klimatskih promjena).
+		\item Upravljanje resursima (npr. održivo ribarstvo).
+		\item Testiranje hipoteza koje je teško ili nemoguće provjeriti u stvarnom svijetu.
+	\end{itemize}
+	
+	\section{Vrste modela}
+	Ekološke modele možemo podijeliti u nekoliko kategorija:
+	\begin{itemize}
+		\item \textbf{Analitički modeli:} Sastoje se od jednadžbi čija se rješenja mogu pronaći u zatvorenom obliku.
+		\item \textbf{Simulacijski (numerički) modeli:} Rješavaju se pomoću računala korak po korak.
+		\item \textbf{Deterministički vs. stohastički modeli:} Deterministički modeli daju isti izlaz za iste ulazne parametre, dok stohastički uključuju element slučajnosti.
+		\item \textbf{Prostorno eksplicitni vs. implicitni modeli:} Eksplicitni modeli uzimaju u obzir točnu lokaciju jedinki ili resursa.
+	\end{itemize}
+	
+	% --- POGLAVLJE 2: MATEMATIČKE OSNOVE ---
+	\chapter{Matematičke osnove za modeliranje}
+	
+	\section{Diferencijalne jednadžbe}
+	Mnogi ekološki procesi, poput rasta populacije, opisuju se kao promjene tijekom vremena. Diferencijalne jednadžbe su ključan alat za to. Primjerice, eksponencijalni rast populacije ($N$) opisuje se jednadžbom:
+	$$ \frac{dN}{dt} = rN $$
+	gdje je $r$ stopa rasta.
+	
+	\section{Matrična algebra}
+	Matrična algebra je neophodna za modele koji prate populacije strukturirane po dobi ili stadijima (npr. Leslie matrice). Matrica prijelaza opisuje vjerojatnosti preživljavanja i reprodukcije različitih dobnih skupina.
+	
+	\section{Osnove vjerojatnosti i statistike}
+	Statistički alati koriste se za procjenu parametara modela iz stvarnih podataka i za analizu nesigurnosti. Stohastički modeli izravno ugrađuju vjerojatnosne procese.
+	
+	% --- POGLAVLJE 3: MODELI POPULACIJSKE DINAMIKE ---
+	\chapter{Modeli populacijske dinamike}
+	
+	\section{Eksponencijalni rast}
+	Model neograničenog rasta, primjenjiv u idealnim uvjetima bez ograničenja resursa.
+	$$ N(t) = N_0 e^{rt} $$
+	gdje je $N_0$ početna veličina populacije.
+	
+	\section{Logistički rast}
+	Realističniji model koji uključuje kapacitet okoliša ($K$). Rast se usporava kako se populacija približava kapacitetu.
+	$$ \frac{dN}{dt} = rN \left(1 - \frac{N}{K}\right) $$
+	
+	\section{Modeli Lotka-Volterra (predator-plijen)}
+	Klasičan model koji opisuje cikličke oscilacije u populacijama predatora ($P$) i plijena ($V$):
+	\begin{align*}
+		\frac{dV}{dt} &= rV - \alpha VP \\
+		\frac{dP}{dt} &= \beta VP - qP
+	\end{align*}
+	
+	\section{Strukturirani modeli populacija}
+	Ovi modeli dijele populaciju u klase (npr. dob, veličina) i prate dinamiku svake klase zasebno, što omogućuje detaljniji uvid u populacijsku dinamiku.
+	
+	% --- POGLAVLJE 4: MODELI INTERAKCIJA ---
+	\chapter{Modeli interakcija među vrstama}
+	\section{Kompeticija}
+	Modeli kompeticije, poput proširenog Lotka-Volterra modela, analiziraju kako dvije ili više vrsta koje koriste iste ograničene resurse utječu jedna na drugu.
+	
+	\section{Mutualizam i parazitizam}
+	Matematički modeli mogu opisati i pozitivne interakcije (mutualizam) ili interakcije gdje jedna vrsta ima koristi na štetu druge (parazitizam).
+	
+	% --- POGLAVLJE 5: MODELI EKOSUSTAVA ---
+	\chapter{Modeli ekosustava}
+	\section{Protok energije i kruženje tvari}
+	Ovi modeli prate kretanje energije i nutrijenata (npr. ugljika, dušika) kroz različite trofičke razine i komponente ekosustava.
+	
+	\section{Modeli hranidbenih mreža}
+	Analiziraju strukturu i stabilnost složenih mreža interakcija predatora i plijena unutar zajednice.
+	
+	\section{Prostorni modeli}
+	Uključuju prostornu dimenziju, modelirajući kako se populacije i resursi raspoređuju i kreću u prostoru (npr. metapopulacijski modeli, modeli krajolika).
+	
+	% --- POGLAVLJE 6: VALIDACIJA I ANALIZA MODELA ---
+	\chapter{Validacija i analiza modela}
+	\section{Kalibracija modela}
+	Proces podešavanja parametara modela kako bi izlaz modela što bolje odgovarao opaženim, stvarnim podacima.
+	
+	\section{Validacija i verifikacija}
+	Validacija je provjera podudara li se model sa stvarnim svijetom, dok je verifikacija provjera radi li model kako je zamišljeno (npr. je li kod ispravan).
+	
+	\section{Analiza osjetljivosti i nesigurnosti}
+	Analiza osjetljivosti ispituje kako promjene u ulaznim parametrima utječu na izlaz modela. Analiza nesigurnosti kvantificira pouzdanost predviđanja modela.
+	
+	% --- POGLAVLJE 7: PREDVIĐANJE U EKOLOGIJI ---
+	\chapter{Predviđanje u ekologiji}
+	\section{Izazovi ekološkog predviđanja}
+	Ekološki sustavi su složeni, nelinearni i podložni slučajnim događajima, što predviđanje čini iznimno teškim.
+	
+	\section{Modeliranje scenarija}
+	Koristi se za istraživanje mogućih budućih ishoda pod različitim pretpostavkama (npr. različiti scenariji klimatskih promjena, politike upravljanja).
+	
+	\section{Primjeri: klimatske promjene i biodiverzitet}
+	Modeli se koriste za predviđanje kako će klimatske promjene utjecati na rasprostranjenost vrsta, stabilnost ekosustava i bioraznolikost.
+	
+	% --- DODATAK I LITERATURA ---
+	\appendix
+	\chapter{Osnove softvera za modeliranje}
+	Kratak pregled popularnih alata za ekološko modeliranje:
+	\begin{itemize}
+		\item \textbf{R:} Snažan statistički jezik s brojnim paketima za ekološko modeliranje.
+		\item \textbf{Python:} Svestran programski jezik s bibliotekama kao što su NumPy i SciPy.
+		\item \textbf{NetLogo:} Platforma za modeliranje temeljeno na agentima.
+	\end{itemize}
+	
+	\backmatter
+	\begin{thebibliography}{9}
+		\bibitem{lotka}
+		Lotka, A. J. (1925). \textit{Elements of physical biology}. Williams \& Wilkins Company.
+		
+		\bibitem{volterra}
+		Volterra, V. (1926). Variazioni e fluttuazioni del numero d'individui in specie animali conviventi. \textit{Mem. R. Accad. Naz. dei Lincei}, 2, 31-113.
+		
+		\bibitem{gotelli}
+		Gotelli, N. J. (2008). \textit{A primer of ecology}. Sinauer Associates.
+		
+	\end{thebibliography}
+	
+\end{document}

@@ -1,0 +1,366 @@
+\babel@toc {croatian}{}\relax 
+\contentsline {part}{I\hspace {1em}Osnove i matematički okvir}{1}{part.1}%
+\contentsline {chapter}{\numberline {1}Uvod u ekološko modeliranje}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Što je ekološko modeliranje?}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Definicije, opseg i uloga}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Povijesni pregled}{4}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Matematički i statistički temelji}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Linearna algebra i matrični modeli}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Diferencijalne i diferentne jednadžbe}{12}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Vjerojatnost, statistika i stohastičnost}{18}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Uvod u stohastičnost u ekološkim sustavima}{18}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Osnovni koncepti vjerojatnosti}{18}{subsection.2.3.2}%
+\contentsline {subsubsection}{Vjerojatnosne distribucije}{18}{section*.3}%
+\contentsline {subsubsection}{Očekivana vrijednost i varijabilnost}{19}{section*.4}%
+\contentsline {subsubsection}{Koeficijent varijacije}{19}{section*.5}%
+\contentsline {subsection}{\numberline {2.3.3}Demografska stohastičnost}{19}{subsection.2.3.3}%
+\contentsline {subsubsection}{Binomni model preživljavanja}{19}{section*.6}%
+\contentsline {subsubsection}{Poissonov model rođenja}{19}{section*.7}%
+\contentsline {subsubsection}{Utjecaj demografske stohastičnosti na male populacije}{20}{section*.8}%
+\contentsline {subsection}{\numberline {2.3.4}Okolišna stohastičnost}{20}{subsection.2.3.4}%
+\contentsline {subsubsection}{Model s okolišnom stohastičnošću}{20}{section*.9}%
+\contentsline {subsubsection}{Geometrijski Brownov pokret}{20}{section*.10}%
+\contentsline {subsubsection}{Logistički model s okolišnom stohastičnošću}{20}{section*.11}%
+\contentsline {subsection}{\numberline {2.3.5}Katastrofična stohastičnost}{21}{subsection.2.3.5}%
+\contentsline {subsubsection}{Poissonov model katastrofa}{21}{section*.12}%
+\contentsline {subsubsection}{Model s katastrofičnim smanjenjem}{21}{section*.13}%
+\contentsline {subsection}{\numberline {2.3.6}Maksimalna vjerojatnost (Maximum Likelihood)}{21}{subsection.2.3.6}%
+\contentsline {subsubsection}{Likelihood funkcija}{21}{section*.14}%
+\contentsline {subsubsection}{Log-likelihood}{21}{section*.15}%
+\contentsline {subsubsection}{Maksimalna vjerojatnost procjena (MLE)}{21}{section*.16}%
+\contentsline {subsubsection}{Primjer: Procjena stope rasta}{22}{section*.17}%
+\contentsline {subsubsection}{Asimptotska svojstva MLE}{22}{section*.18}%
+\contentsline {subsubsection}{Fisherova informacijska matrica}{22}{section*.19}%
+\contentsline {subsection}{\numberline {2.3.7}Bayesovska statistika}{22}{subsection.2.3.7}%
+\contentsline {subsubsection}{Bayesov teorem}{22}{section*.20}%
+\contentsline {subsubsection}{Konjugirani priorovi}{22}{section*.21}%
+\contentsline {subsubsection}{Kredibilni intervali}{22}{section*.22}%
+\contentsline {subsubsection}{Markov Chain Monte Carlo (MCMC)}{23}{section*.23}%
+\contentsline {paragraph}{Metropolis-Hastings algoritam}{23}{section*.24}%
+\contentsline {paragraph}{Gibbs sampling}{23}{section*.25}%
+\contentsline {subsection}{\numberline {2.3.8}Primjeri u ekološkom modeliranju}{23}{subsection.2.3.8}%
+\contentsline {subsubsection}{Procjena parametara logističkog modela}{23}{section*.26}%
+\contentsline {subsubsection}{Analiza preživljavanja u ekologiji}{23}{section*.27}%
+\contentsline {subsubsection}{Bayesova analiza metapopulacije}{23}{section*.28}%
+\contentsline {subsection}{\numberline {2.3.9}Model selekcija i usporedba}{24}{subsection.2.3.9}%
+\contentsline {subsubsection}{Akaike Information Criterion (AIC)}{24}{section*.29}%
+\contentsline {subsubsection}{Bayesian Information Criterion (BIC)}{24}{section*.30}%
+\contentsline {subsubsection}{Bayes faktori}{24}{section*.31}%
+\contentsline {subsection}{\numberline {2.3.10}Propagacija nesigurnosti}{24}{subsection.2.3.10}%
+\contentsline {subsubsection}{Monte Carlo simulacija}{24}{section*.32}%
+\contentsline {subsubsection}{Delta metoda}{24}{section*.33}%
+\contentsline {subsubsection}{Bootstrapping}{24}{section*.34}%
+\contentsline {subsection}{\numberline {2.3.11}Ključne točke za praktičnu primjenu}{25}{subsection.2.3.11}%
+\contentsline {section}{\numberline {2.4}Računalni alati}{25}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Uvod u računalne alate za ekološko modeliranje}{25}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}R programski jezik i okruženje}{25}{subsection.2.4.2}%
+\contentsline {subsubsection}{Uvod u R}{25}{section*.35}%
+\contentsline {subsubsection}{Prednosti R-a za ekološko modeliranje}{25}{section*.36}%
+\contentsline {subsubsection}{Ključni paketi za ekološko modeliranje}{25}{section*.37}%
+\contentsline {paragraph}{Osnovni statistički paketi}{25}{section*.38}%
+\contentsline {paragraph}{Populacijska dinamika i demografija}{26}{section*.39}%
+\contentsline {paragraph}{Prostorno ekološko modeliranje}{26}{section*.40}%
+\contentsline {paragraph}{Ekološke mreže i zajednice}{26}{section*.41}%
+\contentsline {paragraph}{Bayesovska analiza}{26}{section*.42}%
+\contentsline {subsubsection}{Primjer koda: Leslie matrica u R-u}{26}{section*.43}%
+\contentsline {subsubsection}{Upravljanje paketima u R-u}{27}{section*.44}%
+\contentsline {paragraph}{CRAN repozitorij}{27}{lstlisting.2.2}%
+\contentsline {paragraph}{GitHub repozitoriji}{28}{lstlisting.2.3}%
+\contentsline {paragraph}{Upravljanje verzijama s renv}{28}{lstlisting.2.4}%
+\contentsline {subsection}{\numberline {2.4.3}Python programski jezik}{28}{subsection.2.4.3}%
+\contentsline {subsubsection}{Uvod u Python za ekologiju}{28}{section*.48}%
+\contentsline {subsubsection}{Ključne biblioteke za ekološko modeliranje}{28}{section*.49}%
+\contentsline {paragraph}{Znanstvene računalne biblioteke}{28}{section*.50}%
+\contentsline {paragraph}{Strojno učenje i statistika}{29}{section*.51}%
+\contentsline {paragraph}{Prostorni podaci i GIS}{29}{section*.52}%
+\contentsline {paragraph}{Specijalizirane ekološke biblioteke}{29}{section*.53}%
+\contentsline {subsubsection}{Primjer koda: Lotka-Volterra model u Pythonu}{29}{section*.54}%
+\contentsline {subsubsection}{Upravljanje okruženjima u Pythonu}{30}{section*.55}%
+\contentsline {paragraph}{Conda upravljanje paketima}{30}{lstlisting.2.6}%
+\contentsline {paragraph}{pip i virtualenv}{30}{lstlisting.2.7}%
+\contentsline {subsection}{\numberline {2.4.4}MATLAB}{31}{subsection.2.4.4}%
+\contentsline {subsubsection}{Uvod u MATLAB za ekološko modeliranje}{31}{section*.58}%
+\contentsline {subsubsection}{Prednosti MATLAB-a}{31}{section*.59}%
+\contentsline {subsubsection}{Relevantni toolboxovi za ekologiju}{31}{section*.60}%
+\contentsline {subsection}{\numberline {2.4.5}GNU Octave}{31}{subsection.2.4.5}%
+\contentsline {subsubsection}{Uvod u GNU Octave}{31}{section*.61}%
+\contentsline {subsubsection}{Prednosti Octave-a za ekološko modeliranje}{32}{section*.62}%
+\contentsline {subsubsection}{Ključni paketi za ekološko modeliranje}{32}{section*.63}%
+\contentsline {paragraph}{Osnovni paketi}{32}{section*.64}%
+\contentsline {paragraph}{Numeričko rješavanje}{32}{section*.65}%
+\contentsline {subsubsection}{Primjer koda: Populacijski model u Octave}{32}{section*.66}%
+\contentsline {subsubsection}{Instalacija i upravljanje paketima}{36}{section*.67}%
+\contentsline {paragraph}{Instalacija Octave-a}{36}{lstlisting.2.9}%
+\contentsline {paragraph}{Upravljanje paketima}{36}{lstlisting.2.10}%
+\contentsline {subsection}{\numberline {2.4.6}Python Scientific Computing Stack}{37}{subsection.2.4.6}%
+\contentsline {subsubsection}{SciPy ekosustav za ekološko modeliranje}{37}{section*.70}%
+\contentsline {subsubsection}{Ključne komponente SciPy stack-a}{37}{section*.71}%
+\contentsline {paragraph}{NumPy - Numerička osnova}{37}{section*.72}%
+\contentsline {paragraph}{SciPy - Znanstveni algoritmi}{37}{section*.73}%
+\contentsline {paragraph}{Matplotlib - Vizualizacija}{37}{section*.74}%
+\contentsline {subsubsection}{Napredni primjer: Prostorno-eksplicitni epidemiološki model}{37}{section*.75}%
+\contentsline {subsection}{\numberline {2.4.7}Julia programski jezik}{44}{subsection.2.4.7}%
+\contentsline {subsubsection}{Uvod u Julia za ekološko modeliranje}{44}{section*.76}%
+\contentsline {subsubsection}{Prednosti Julia za ekologiju}{44}{section*.77}%
+\contentsline {subsubsection}{Ključni paketi za ekološko modeliranje}{44}{section*.78}%
+\contentsline {paragraph}{Diferencijalne jednadžbe i simulacije}{44}{section*.79}%
+\contentsline {paragraph}{Optimizacija i fitting}{44}{section*.80}%
+\contentsline {paragraph}{Podatkovni rad i statistika}{45}{section*.81}%
+\contentsline {paragraph}{Vizualizacija}{45}{section*.82}%
+\contentsline {subsubsection}{Napredni primjer: Metapopulacijski model s genetskom strukturom}{45}{section*.83}%
+\contentsline {subsubsection}{Instalacija i upravljanje paketima}{54}{section*.84}%
+\contentsline {paragraph}{Instalacija Julia}{54}{lstlisting.2.13}%
+\contentsline {paragraph}{Upravljanje paketima u Julia}{54}{lstlisting.2.14}%
+\contentsline {paragraph}{Project.toml za reproducibilnost}{54}{lstlisting.2.15}%
+\contentsline {subsection}{\numberline {2.4.8}NetLogo}{55}{subsection.2.4.8}%
+\contentsline {subsubsection}{Uvod u NetLogo}{55}{section*.88}%
+\contentsline {subsubsection}{Ključne značajke NetLogo-a}{55}{section*.89}%
+\contentsline {subsubsection}{Struktura NetLogo modela}{55}{section*.90}%
+\contentsline {subsubsection}{Primjer NetLogo koda: Predator-Prey model}{55}{section*.91}%
+\contentsline {subsection}{\numberline {2.4.9}Reproducibilnost i najbolje prakse}{57}{subsection.2.4.9}%
+\contentsline {subsubsection}{Principi reproducibilne znanosti}{57}{section*.92}%
+\contentsline {paragraph}{Ključni elementi reproducibilnosti:}{57}{section*.93}%
+\contentsline {subsubsection}{Git verzioniranje za ekološke projekte}{57}{section*.94}%
+\contentsline {subsubsection}{Struktura reproducibilnog projekta}{58}{section*.95}%
+\contentsline {subsubsection}{Docker kontejneri za ekološko modeliranje}{58}{section*.96}%
+\contentsline {subsubsection}{Automatizacija s Makefile}{59}{section*.97}%
+\contentsline {subsubsection}{Upravljanje ovisnostima}{61}{section*.98}%
+\contentsline {paragraph}{R renv sustav}{61}{lstlisting.2.21}%
+\contentsline {paragraph}{Python virtualenv i pip-tools}{61}{lstlisting.2.22}%
+\contentsline {subsection}{\numberline {2.4.10}Integracijska prilazi i interoperabilnost}{62}{subsection.2.4.10}%
+\contentsline {subsubsection}{R i Python integracija}{62}{section*.101}%
+\contentsline {paragraph}{reticulate paket}{62}{lstlisting.2.23}%
+\contentsline {subsection}{\numberline {2.4.11}Zaključak i preporuke}{62}{subsection.2.4.11}%
+\contentsline {subsubsection}{Izbor alata prema vrsti problema}{62}{section*.103}%
+\contentsline {subsubsection}{Objašnjenja i smjernice za izbor}{63}{section*.104}%
+\contentsline {paragraph}{GNU Octave specijalizacije:}{63}{section*.105}%
+\contentsline {paragraph}{Julia specijalizacije:}{63}{section*.106}%
+\contentsline {paragraph}{Hibridni pristupi:}{63}{section*.107}%
+\contentsline {subsubsection}{Ključne preporuke}{63}{section*.108}%
+\contentsline {part}{II\hspace {1em}Populacije, zajednice i ekosustavi}{66}{part.2}%
+\contentsline {chapter}{\numberline {3}Modeli populacijske dinamike}{67}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Jednostavni modeli}{67}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Uvod u populacijsku dinamiku}{67}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Eksponencijalni rast}{67}{subsection.3.1.2}%
+\contentsline {subsubsection}{Kontinuirani model eksponencijalnog rasta}{67}{section*.109}%
+\contentsline {subsubsection}{Interpretacija parametra $r$}{67}{section*.110}%
+\contentsline {subsubsection}{Vrijeme udvostručavanja}{68}{section*.111}%
+\contentsline {subsubsection}{Diskretni eksponencijalni model}{68}{section*.112}%
+\contentsline {subsection}{\numberline {3.1.3}Logistički rast}{68}{subsection.3.1.3}%
+\contentsline {subsubsection}{Kontinuirani logistički model}{68}{section*.113}%
+\contentsline {subsubsection}{Analiza logističke jednadžbe}{68}{section*.114}%
+\contentsline {subsubsection}{Karakteristike logističke krivulje}{69}{section*.115}%
+\contentsline {subsection}{\numberline {3.1.4}Diskretni modeli rasta}{69}{subsection.3.1.4}%
+\contentsline {subsubsection}{Diskretni logistički model}{69}{section*.116}%
+\contentsline {subsubsection}{Ricker model}{69}{section*.117}%
+\contentsline {subsubsection}{Beverton-Holt model}{70}{section*.118}%
+\contentsline {subsection}{\numberline {3.1.5}Usporedba diskretnih modela}{70}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Procjena parametara}{70}{subsection.3.1.6}%
+\contentsline {subsubsection}{Linearizacija za procjenu parametara}{70}{section*.119}%
+\contentsline {subsubsection}{Nelinearna regresija}{70}{section*.120}%
+\contentsline {section}{\numberline {3.2}Dobno/stanovno strukturirani modeli}{71}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Uvod u strukturirane modele}{71}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Leslie matrica}{71}{subsection.3.2.2}%
+\contentsline {subsubsection}{Teorijski okvir}{71}{section*.121}%
+\contentsline {subsubsection}{Konstrukcija Leslie matrice}{71}{section*.122}%
+\contentsline {subsubsection}{Asimptotsko ponašanje}{71}{section*.123}%
+\contentsline {subsubsection}{Euler-Lotka jednadžba}{72}{section*.124}%
+\contentsline {subsection}{\numberline {3.2.3}Lefkovitch matrica}{72}{subsection.3.2.3}%
+\contentsline {subsubsection}{Općeniti okvir}{72}{section*.125}%
+\contentsline {subsubsection}{Interpretacija elemenata matrice}{72}{section*.126}%
+\contentsline {subsection}{\numberline {3.2.4}Analiza osjetljivosti i elastičnosti}{73}{subsection.3.2.4}%
+\contentsline {subsubsection}{Osjetljivost (Sensitivity)}{73}{section*.127}%
+\contentsline {subsubsection}{Elastičnost (Elasticity)}{73}{section*.128}%
+\contentsline {subsubsection}{LTRE analiza (Life Table Response Experiment)}{73}{section*.129}%
+\contentsline {subsection}{\numberline {3.2.5}Napredni koncepti strukturiranih modela}{73}{subsection.3.2.5}%
+\contentsline {subsubsection}{Gustoćno ovisni strukturirani modeli}{73}{section*.130}%
+\contentsline {subsubsection}{Stohastički strukturirani modeli}{74}{section*.131}%
+\contentsline {subsubsection}{Perioidičnost i sezonalnost}{74}{section*.132}%
+\contentsline {section}{\numberline {3.3}Metapopulacijski modeli}{74}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Uvod u metapopulacijsku ekologiju}{74}{subsection.3.3.1}%
+\contentsline {subsubsection}{Ključni koncepti}{74}{section*.133}%
+\contentsline {subsection}{\numberline {3.3.2}Levinsov klasični model}{74}{subsection.3.3.2}%
+\contentsline {subsubsection}{Osnovni okvir}{74}{section*.134}%
+\contentsline {subsubsection}{Analiza Levinsovog modela}{75}{section*.135}%
+\contentsline {subsubsection}{Dinamika Levinsovog modela}{75}{section*.136}%
+\contentsline {subsection}{\numberline {3.3.3}Prostorno eksplicitni metapopulacijski modeli}{75}{subsection.3.3.3}%
+\contentsline {subsubsection}{Model s prostornim rasporedom}{75}{section*.137}%
+\contentsline {subsubsection}{Metapopulacijska kapaciteta}{76}{section*.138}%
+\contentsline {subsection}{\numberline {3.3.4}Modeli s heterogenošću fragmenata}{76}{subsection.3.3.4}%
+\contentsline {subsubsection}{Varijacije u kvaliteti staništa}{76}{section*.139}%
+\contentsline {subsubsection}{Rescue efekt}{76}{section*.140}%
+\contentsline {subsection}{\numberline {3.3.5}Diskretni metapopulacijski modeli}{76}{subsection.3.3.5}%
+\contentsline {subsubsection}{Diskretna verzija Levinsovog modela}{76}{section*.141}%
+\contentsline {subsubsection}{Stohastički diskretni model}{77}{section*.142}%
+\contentsline {subsection}{\numberline {3.3.6}Fragmentacija staništa}{77}{subsection.3.3.6}%
+\contentsline {subsubsection}{Utjecaj fragmentacije}{77}{section*.143}%
+\contentsline {subsubsection}{Kritični prag fragmentacije}{77}{section*.144}%
+\contentsline {subsection}{\numberline {3.3.7}Empirijski primjer: Metapopulacija leptira}{77}{subsection.3.3.7}%
+\contentsline {subsubsection}{Melitaea cinxia na Ålandskim otocima}{77}{section*.145}%
+\contentsline {subsubsection}{Prediktivni uspjeh}{78}{section*.146}%
+\contentsline {subsection}{\numberline {3.3.8}Praktične primjene metapopulacijskih modela}{78}{subsection.3.3.8}%
+\contentsline {subsubsection}{Dizajn rezervata}{78}{section*.147}%
+\contentsline {subsubsection}{Minimalna životna populacija}{78}{section*.148}%
+\contentsline {chapter}{\numberline {4}Međuspecijske interakcije i modeli zajednica}{79}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Grabljivac--plijen i funkcijski odgovori}{79}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Uvod u predator-prey dinamiku}{79}{subsection.4.1.1}%
+\contentsline {subsubsection}{Klasifikacija trofnih interakcija}{79}{section*.149}%
+\contentsline {subsection}{\numberline {4.1.2}Lotka-Volterra modeli}{79}{subsection.4.1.2}%
+\contentsline {subsubsection}{Osnovni Lotka-Volterra model}{79}{section*.150}%
+\contentsline {subsubsection}{Analiza ravnotežnih točaka}{80}{section*.151}%
+\contentsline {subsubsection}{Linearna stabilnostna analiza}{80}{section*.152}%
+\contentsline {subsubsection}{Konzervirana količina}{81}{section*.153}%
+\contentsline {subsubsection}{Perioda oscilacija}{81}{section*.154}%
+\contentsline {subsection}{\numberline {4.1.3}Funkcijski odgovori}{81}{subsection.4.1.3}%
+\contentsline {subsubsection}{Definicija i tipovi}{81}{section*.155}%
+\contentsline {subsubsection}{Izvod Tip II funkcijskog odgovora}{81}{section*.156}%
+\contentsline {subsubsection}{Svojstva funkcijskih odgovora}{82}{section*.157}%
+\contentsline {subsection}{\numberline {4.1.4}Modifikacije Lotka-Volterra modela}{82}{subsection.4.1.4}%
+\contentsline {subsubsection}{Model s Tip II funkcijskim odgovorom}{82}{section*.158}%
+\contentsline {subsubsection}{Rosenzweig-MacArthur model}{83}{section*.159}%
+\contentsline {subsubsection}{Model s Tip III funkcijskim odgovorom}{83}{section*.160}%
+\contentsline {subsection}{\numberline {4.1.5}Prostorni predator-prey modeli}{83}{subsection.4.1.5}%
+\contentsline {subsubsection}{Reakcijska-difuzija modeli}{83}{section*.161}%
+\contentsline {subsubsection}{Prostorna stabilizacija}{83}{section*.162}%
+\contentsline {section}{\numberline {4.2}Konkurencija i koegzistencija}{83}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Teorija konkurencije}{83}{subsection.4.2.1}%
+\contentsline {subsubsection}{Tipovi konkurencije}{83}{section*.163}%
+\contentsline {subsubsection}{Gause-ov princip}{84}{section*.164}%
+\contentsline {subsection}{\numberline {4.2.2}Lotka-Volterra model konkurencije}{84}{subsection.4.2.2}%
+\contentsline {subsubsection}{Dvospecijski model}{84}{section*.165}%
+\contentsline {subsubsection}{Isokline i fazni portret}{84}{section*.166}%
+\contentsline {subsubsection}{Uvjeti za koegzistenciju}{84}{section*.167}%
+\contentsline {subsubsection}{Scenariji konkurencije}{85}{section*.168}%
+\contentsline {subsection}{\numberline {4.2.3}Moderna teorija koegzistencije}{85}{subsection.4.2.3}%
+\contentsline {subsubsection}{Chesson okvir}{85}{section*.169}%
+\contentsline {subsubsection}{Invazijski rast}{85}{section*.170}%
+\contentsline {subsubsection}{Modern coexistence mechanisms}{86}{section*.171}%
+\contentsline {subsection}{\numberline {4.2.4}Resource partitioning i niche teorija}{86}{subsection.4.2.4}%
+\contentsline {subsubsection}{MacArthur-ov model resursa}{86}{section*.172}%
+\contentsline {subsubsection}{Limiting similarity}{86}{section*.173}%
+\contentsline {subsubsection}{Character displacement}{86}{section*.174}%
+\contentsline {section}{\numberline {4.3}Ekološke mreže i stabilnost zajednica}{87}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Uvod u ekološke mreže}{87}{subsection.4.3.1}%
+\contentsline {subsubsection}{Tipovi ekoloških mreža}{87}{section*.175}%
+\contentsline {subsection}{\numberline {4.3.2}Topologija hranidbenih mreža}{87}{subsection.4.3.2}%
+\contentsline {subsubsection}{Osnovni parametri mreže}{87}{section*.176}%
+\contentsline {subsubsection}{Trofni nivoi}{87}{section*.177}%
+\contentsline {subsubsection}{Modularnost}{87}{section*.178}%
+\contentsline {subsection}{\numberline {4.3.3}May-ova analiza stabilnosti}{88}{subsection.4.3.3}%
+\contentsline {subsubsection}{Random matrix pristup}{88}{section*.179}%
+\contentsline {subsubsection}{Random matrica svojstva}{88}{section*.180}%
+\contentsline {subsubsection}{Interpretacija May-ovog rezultata}{88}{section*.181}%
+\contentsline {subsection}{\numberline {4.3.4}Strukturni aspekti stabilnosti}{88}{subsection.4.3.4}%
+\contentsline {subsubsection}{Trofna koherentnost}{88}{section*.182}%
+\contentsline {subsubsection}{Modularna struktura}{89}{section*.183}%
+\contentsline {subsection}{\numberline {4.3.5}Kaskadni učinci}{89}{subsection.4.3.5}%
+\contentsline {subsubsection}{Trofni kaskadni učinci}{89}{section*.184}%
+\contentsline {subsubsection}{Sekundarni izumiranje}{89}{section*.185}%
+\contentsline {subsubsection}{Keystone vrste}{89}{section*.186}%
+\contentsline {subsection}{\numberline {4.3.6}Dinamička analiza mreža}{89}{subsection.4.3.6}%
+\contentsline {subsubsection}{Perturbation analiza}{89}{section*.187}%
+\contentsline {subsubsection}{Return time}{89}{section*.188}%
+\contentsline {subsection}{\numberline {4.3.7}Empirijski primjeri}{90}{subsection.4.3.7}%
+\contentsline {subsubsection}{Yellowstone vukovi}{90}{section*.189}%
+\contentsline {subsubsection}{Morska vidra i kelp šume}{90}{section*.190}%
+\contentsline {subsection}{\numberline {4.3.8}Mrežne metrike i bioraznolikost}{90}{subsection.4.3.8}%
+\contentsline {subsubsection}{Species importance indices}{90}{section*.191}%
+\contentsline {subsubsection}{Network motifs}{90}{section*.192}%
+\contentsline {subsection}{\numberline {4.3.9}Prostorno-eksplicitni mrežni modeli}{91}{subsection.4.3.9}%
+\contentsline {subsubsection}{Metahranidbene mreže}{91}{section*.193}%
+\contentsline {subsubsection}{Prostorna stabilnost hranidbenih mreža}{91}{section*.194}%
+\contentsline {chapter}{\numberline {5}Modeli ekosustava i bioenergetika}{92}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Kruženje tvari i energije}{92}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Osnovni principi i bilance tvari}{92}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Biogeokemijski ciklusi}{92}{subsection.5.1.2}%
+\contentsline {subsubsection}{Ciklus ugljika}{92}{section*.195}%
+\contentsline {subsubsection}{Ciklus dušika}{93}{section*.196}%
+\contentsline {subsection}{\numberline {5.1.3}Energetski tokovi kroz ekosustav}{93}{subsection.5.1.3}%
+\contentsline {subsubsection}{Lindeman-ova piramida efikasnosti}{93}{section*.197}%
+\contentsline {subsection}{\numberline {5.1.4}Ohmov zakon za ekologiju}{94}{subsection.5.1.4}%
+\contentsline {section}{\numberline {5.2}Bioenergetski i DEB modeli}{94}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Osnove DEB teorije}{94}{subsection.5.2.1}%
+\contentsline {subsubsection}{Osnovne varijable stanja}{94}{section*.198}%
+\contentsline {subsubsection}{Temeljne jednadžbe}{94}{section*.199}%
+\contentsline {subsubsection}{Diferencijalne jednadžbe DEB modela}{95}{section*.200}%
+\contentsline {subsection}{\numberline {5.2.2}Standardni DEB model}{95}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Funkcionalni odgovor u DEB kontekstu}{96}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Povezivanje DEB modela s populacijskim dinamikama}{96}{subsection.5.2.4}%
+\contentsline {section}{\numberline {5.3}Ecosystem services}{96}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Klasifikacija i kvantifikacija}{96}{subsection.5.3.1}%
+\contentsline {subsubsection}{Kvantifikacija pomoću produkcijskih funkcija}{96}{section*.201}%
+\contentsline {subsection}{\numberline {5.3.2}Ekonomska vrednovanje}{97}{subsection.5.3.2}%
+\contentsline {subsubsection}{Metoda zamjenskih troškova}{97}{section*.202}%
+\contentsline {subsubsection}{Hedonistic pricing}{97}{section*.203}%
+\contentsline {subsection}{\numberline {5.3.3}Trade-off analize}{97}{subsection.5.3.3}%
+\contentsline {subsubsection}{Pareto granica}{97}{section*.204}%
+\contentsline {subsubsection}{Elastičnost supstitucije}{98}{section*.205}%
+\contentsline {subsection}{\numberline {5.3.4}Prostorno modeliranje usluga}{98}{subsection.5.3.4}%
+\contentsline {subsubsection}{InVEST modeli}{98}{section*.206}%
+\contentsline {subsection}{\numberline {5.3.5}Dinamičko modeliranje usluga}{98}{subsection.5.3.5}%
+\contentsline {subsubsection}{Optimalno korištenje kroz vrijeme}{99}{section*.207}%
+\contentsline {part}{III\hspace {1em}Prostor, predviđanje i AI}{100}{part.3}%
+\contentsline {chapter}{\numberline {6}Prostorno-ekološko modeliranje}{101}{chapter.6}%
+\contentsline {section}{\numberline {6.1}GIS, daljinska istraživanja i prostorne skale}{101}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Geografski informacijski sustavi (GIS) u ekologiji}{101}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Daljinska istraživanja i satelitski podatci}{101}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}Prostorne skale u ekologiji}{102}{subsection.6.1.3}%
+\contentsline {subsubsection}{Lokalna skala (<1 km)}{102}{section*.208}%
+\contentsline {subsubsection}{Krajobrazna skala (1-100 km)}{102}{section*.209}%
+\contentsline {subsubsection}{Regionalna skala (100-1000 km)}{103}{section*.210}%
+\contentsline {subsubsection}{Kontinentalna skala (>1000 km)}{103}{section*.211}%
+\contentsline {subsection}{\numberline {6.1.4}Prostorna autokorelacija}{103}{subsection.6.1.4}%
+\contentsline {section}{\numberline {6.2}Modeli rasprostiranja vrsta (SDM/ENM)}{103}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Konceptualni okvir}{104}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Klimatske varijable i bioklimatski slojevi}{104}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Algoritmi SDM modeliranja}{105}{subsection.6.2.3}%
+\contentsline {subsubsection}{Maximum Entropy (MaxEnt)}{105}{section*.212}%
+\contentsline {subsubsection}{Generalizirani linearni modeli (GLM)}{105}{section*.213}%
+\contentsline {subsubsection}{Random Forest}{106}{section*.214}%
+\contentsline {subsection}{\numberline {6.2.4}Evaluacija modela}{106}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Pristranost uzorkovanja}{106}{subsection.6.2.5}%
+\contentsline {section}{\numberline {6.3}Individualno temeljeni modeli (IBM)}{107}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Konceptualni okvir IBM-a}{107}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Prostorno ponašanje i movement}{107}{subsection.6.3.2}%
+\contentsline {subsection}{\numberline {6.3.3}Energetski modeli}{108}{subsection.6.3.3}%
+\contentsline {subsection}{\numberline {6.3.4}Reprodukcija i demografija}{108}{subsection.6.3.4}%
+\contentsline {subsection}{\numberline {6.3.5}Interakcije između jedinki}{108}{subsection.6.3.5}%
+\contentsline {subsection}{\numberline {6.3.6}Emergentna svojstva}{109}{subsection.6.3.6}%
+\contentsline {subsection}{\numberline {6.3.7}Implementacija i softverski alati}{109}{subsection.6.3.7}%
+\contentsline {chapter}{\numberline {7}Prediktivno modeliranje i scenariji}{111}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Scenariji klimatskih promjena}{111}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Predviđanje invazija i rani sustavi upozorenja}{111}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Spajanje mehanističkih i statističkih pristupa}{111}{section.7.3}%
+\contentsline {chapter}{\numberline {8}Statistički i AI pristupi}{112}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Klasična i Bayesovska statistika}{112}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Strojno učenje}{112}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Duboko učenje i digitalni blizanci ekosustava}{112}{section.8.3}%
+\contentsline {part}{IV\hspace {1em}Validacija, nesigurnost i primjene}{113}{part.4}%
+\contentsline {chapter}{\numberline {9}Validacija, verifikacija i osjetljivost}{114}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Kalibracija i verifikacija}{114}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Analize osjetljivosti i robustnosti}{114}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Etika i komunikacija nesigurnosti}{114}{section.9.3}%
+\contentsline {chapter}{\numberline {10}Primjene u upravljanju okolišem}{115}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Zaštita prirode i bioraznolikosti}{115}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Poljoprivreda i šumarstvo}{115}{section.10.2}%
+\contentsline {section}{\numberline {10.3}Ekotoksikologija i procjena rizika}{115}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Klimatske politike i održivi razvoj}{115}{section.10.4}%
+\contentsline {part}{V\hspace {1em}Studije slučaja i praktične vježbe}{116}{part.5}%
+\contentsline {chapter}{\numberline {11}Studije slučaja}{117}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Gujavice u agroekosustavima}{117}{section.11.1}%
+\contentsline {section}{\numberline {11.2}Širenje komaraca}{117}{section.11.2}%
+\contentsline {section}{\numberline {11.3}Eutrofikacija riječnog ekosustava}{117}{section.11.3}%
+\contentsline {section}{\numberline {11.4}Fragmentacija šuma i ptice metapopulacija}{117}{section.11.4}%
+\contentsline {section}{\numberline {11.5}Bayesove mreže u ekotoksikologiji}{117}{section.11.5}%
+\contentsline {chapter}{\numberline {12}Praktične vježbe (\textsf {R}{} i \textsf {Python}{})}{118}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Uvod u \textsf {R}{} i \textsf {Python}{} alate}{118}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Leslie matrica u \textsf {R}{}}{118}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Lotka--Volterra simulacija u \textsf {Python}{}}{118}{section.12.3}%
+\contentsline {section}{\numberline {12.4}SDM u \textsf {R}{} (skica s \texttt {dismo})}{119}{section.12.4}%
+\contentsline {section}{\numberline {12.5}Random Forest za invazije}{119}{section.12.5}%
+\contentsline {section}{\numberline {12.6}DEB simulacije (skica)}{119}{section.12.6}%
+\contentsline {chapter}{\numberline {A}Matematički prilozi}{121}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Osnovni populacijski modeli}{121}{section.A.1}%
+\contentsline {chapter}{\numberline {B}Instalacija softvera}{122}{appendix.B}%
+\contentsline {chapter}{\numberline {C}Primjeri koda}{123}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Rječnik pojmova}{124}{appendix.D}%

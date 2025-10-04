@@ -1,0 +1,9 @@
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'Koncept3.blg'
+[52] biber:340> INFO - === sri lis  1, 2025, 22:42:31
+[61] Biber.pm:418> INFO - Reading 'Koncept3.bcf'
+[104] Biber.pm:972> INFO - Found 0 citekeys in bib section 0
+[122] bbl.pm:654> INFO - Writing 'Koncept3.bbl' with encoding 'UTF-8'
+[123] bbl.pm:757> INFO - Output to Koncept3.bbl
+[123] Biber.pm:130> WARN - The file 'Koncept3.bcf' does not contain any citations!
+[123] Biber.pm:132> INFO - WARNINGS: 1

@@ -1,0 +1,364 @@
+% !TEX TS-program = lualatex
+\documentclass[12pt,oneside]{book}
+
+% ====== JEZIK I KODNA STRANA ======
+\usepackage{fontspec} % za LuaLaTeX/XeLaTeX; uklonite i dodajte inputenc+fontenc ako koristite pdfLaTeX
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{Latin Modern Roman}
+\usepackage[croatian]{babel}
+
+% ====== GEOMETRIJA I OSNOVNI PAKETI ======
+\usepackage[a4paper,margin=2.8cm]{geometry}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{csquotes}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+\usepackage{enumitem}
+\setlist{itemsep=2pt,topsep=2pt}
+
+% ====== HIPERLINKOVI I NASLOV ======
+\usepackage[hidelinks]{hyperref}
+\usepackage[capitalise,nameinlink]{cleveref}
+
+\usepackage[most]{tcolorbox}
+
+% ====== KÔD I LISTINZI ======
+\usepackage{listings}
+\lstset{
+	basicstyle=\ttfamily\small,
+	columns=fullflexible,
+	frame=single,
+	breaklines=true,
+	showstringspaces=false
+}
+
+% ====== BIBLIOGRAFIJA (Biber) ======
+\usepackage[
+backend=biber,
+style=authoryear,
+sorting=nyt,
+giveninits=true,
+maxbibnames=6
+]{biblatex}
+\addbibresource{literatura.bib} % napravite datoteku literatura.bib
+
+% ====== META PODACI ======
+\title{Ekološko modeliranje i predviđanje\\[4pt]\large Sveobuhvatni koncept sveučilišnog udžbenika}
+\author{Branimir Hackenberger}
+\date{2025}
+
+% ====== POMOĆNI MAKROI ======
+\newcommand{\R}{\textsf{R}}
+\newcommand{\Python}{\textsf{Python}}
+
+\begin{document}
+	\frontmatter
+	\maketitle
+	\tableofcontents
+	
+	\chapter*{Predgovor}
+	Ovaj udžbenik sintetizira teorijske temelje, metode i praktične primjene ekološkog
+	modeliranja s posebnim naglaskom na validaciju, nesigurnost i prediktivne scenarije.
+	Struktura je objedinjena iz dvije početne skice i prilagođena kao koherentan kurikulum
+	za preddiplomske i diplomske studije ekologije, biologije i znanosti o okolišu, te kao
+	referentni priručnik za istraživače i praktičare.\footnote{Temeljni raspored poglavlja,
+		definicije i okviri preuzeti su i integrirani iz \textit{Koncept.pdf} i \textit{Koncept2.pdf}.}
+	
+	\mainmatter
+	
+	% =====================================================
+	\part{Osnove i matematički okvir}
+	% =====================================================
+	
+	\chapter{Uvod u ekološko modeliranje}
+	\label{ch:uvod}
+	
+	\section{Što je ekološko modeliranje?}
+	\label{sec:sto-je-modeliranje}
+	
+	Ekološko modeliranje je sustavno korištenje matematičkih, statističkih i računalnih alata za \emph{formaliziranje} naše spoznaje o organizmima, populacijama, zajednicama i ekosustavima te za \emph{predviđanje} njihovog ponašanja u različitim uvjetima. Model je pojednostavljenje stvarnosti: on izdvaja bitne komponente i procese kako bi omogućio razumijevanje (\emph{zašto} se nešto događa), kvantifikaciju (\emph{koliko} i \emph{koliko brzo}) i prosudbu (\emph{što ako} promijenimo uvjete).
+	
+	% --- CALL OUT BOX ---
+	\begin{tcolorbox}[colback=blue!5,colframe=blue!50!black,title={Savjet}]
+		Dobar model ne mora biti složen: često je jednostavniji model koji hvata ključne procese
+		vrijedniji od kompliciranog modela s teško dostupnim parametrima.
+	\end{tcolorbox}
+	
+	% --- EXERCISE BOX ---
+	\begin{tcolorbox}[colback=green!5,colframe=green!40!black,title={Zadatak 1}]
+		Napišite vlastitim riječima kako biste modelirali populaciju žaba u baru: 
+		koje varijable stanja biste uveli, koji parametri bi bili važni, i kako biste opisali dinamiku?
+	\end{tcolorbox}
+	
+	\section{Definicije, opseg i uloga}
+	\label{sec:definicije-ulogea}
+	
+	Ekološko modeliranje obuhvaća četiri komplementarne uloge:
+	
+	\begin{itemize}
+		\item \textbf{Deskriptivna} --- opis obrazaca (npr. trend populacije).
+		\item \textbf{Eksplanatorna} --- uzročno-posljedične hipoteze.
+		\item \textbf{Prediktivna} --- predviđanja izvan opaženog raspona.
+		\item \textbf{Preskriptivna} --- preporuke za upravljanje i politiku.
+	\end{itemize}
+	
+	\begin{tcolorbox}[colback=yellow!10,colframe=orange!80!black,title={Savjet}]
+		Prije nego što izradite model, pitajte se: 
+		\emph{Je li svrha mog modela opis, objašnjenje, predviđanje ili preporuka?} 
+		Odgovor određuje tip modela i potrebnu razinu složenosti.
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[colback=green!5,colframe=green!40!black,title={Zadatak 2}]
+		Za sljedeće primjere odredite kojoj kategoriji modeliranja pripadaju:  
+		\begin{enumerate}
+			\item Projekcija širenja invazivne vrste pod klimatskim promjenama.  
+			\item Analiza učinka temperature na brzinu metabolizma riba.  
+			\item Karta raspodjele šumskih tipova prema satelitskim snimkama.  
+			\item Model koji preporučuje kvote ribolova radi održivosti.  
+		\end{enumerate}
+	\end{tcolorbox}
+	
+	\section{Povijesni pregled}
+	\label{sec:povijesni-pregled}
+	
+	Razvoj ekološkog modeliranja može se podijeliti u nekoliko ključnih etapa:
+	\begin{itemize}
+		\item \textbf{18.–19. st.}: Malthus (eksponencijalni rast), Verhulst (logistički rast).
+		\item \textbf{20. st. rana polovica}: Lotka–Volterra (grabljivac–plijen), Gause (kompetitivna isključenost), Holling (funkcijski odgovori).
+		\item \textbf{Sredina 20. st.}: Leslie (dobno strukturirane matrice), Lefkovitch (stadiji).
+		\item \textbf{1960.–1980.}: Levins (metapopulacije), May (složenost i stabilnost, kaos).
+		\item \textbf{1990.–danas}: SDM/ENM, Bayes, strojno učenje, DEB, digitalni blizanci.
+	\end{itemize}
+	
+	\begin{tcolorbox}[colback=blue!5,colframe=blue!70!black,title={Savjet}]
+		Povijesni pregled nije samo lista imena --- on pokazuje kako se pitanja ekologije
+		razvijaju u skladu s dostupnim matematičkim alatima i tehnologijom.
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[colback=green!5,colframe=green!40!black,title={Zadatak 3}]
+		Istražite:  
+		\begin{enumerate}
+			\item Koji je bio glavni nedostatak Malthusovog modela u odnosu na stvarne populacije?  
+			\item Kako je Verhulstov logistički model popravio taj nedostatak?  
+			\item U kojim uvjetima Lotka–Volterra model gubi stabilnost i prelazi u oscilacije?  
+		\end{enumerate}
+	\end{tcolorbox}
+	
+	
+	\chapter{Matematičke i statističke osnove}
+	\section{Linearna algebra i matrični modeli}
+	Leslie i Lefkovitch matrice; dominantna vlastita vrijednost $\lambda_1$ određuje asimptotsku stopu rasta.
+	\section{Diferencijalne i diskretne jednadžbe}
+	Eksponencijalni i logistički rast:
+	\begin{equation}
+		\frac{dN}{dt} = rN\Bigl(1-\frac{N}{K}\Bigr), \qquad
+		N(t)=\frac{K}{1+\Bigl(\frac{K-N_0}{N_0}\Bigr)e^{-rt}}.
+	\end{equation}
+	\section{Vjerojatnost, statistika i stohastičnost}
+	Demografska, okolišna i katastrofična stohastičnost; maksimumna vjerojatnost, Bayesov pristup.
+	\section{Računalni alati}
+	\R, \Python, Matlab, NetLogo; reproducibilnost i upravljanje paketima.
+	
+	% =====================================================
+	\part{Populacije, zajednice i ekosustavi}
+	% =====================================================
+	
+	\chapter{Modeli populacijske dinamike}
+	\section{Jednostavni modeli}
+	Eksponencijalni i logistički rast; diskretni modeli (Ricker, Beverton--Holt).
+	\section{Dobno/stanovno strukturirani modeli}
+	Leslie/Lefkovitch; tranzicijske matrice; elastičnosti i osjetljivosti.
+	\section{Metapopulacijski modeli}
+	Levinsov okvir, kolonizacija i izumiranje, fragmentacija.
+	
+	\chapter{Međuspecijske interakcije i modeli zajednica}
+	\section{Grabljivac--plijen i funkcijski odgovori}
+	Lotka--Volterra; Holling tip I--III.
+	\section{Konkurencija i koegzistencija}
+	Uvjete koegzistencije i stabilnost; niše i preklapanje resursa.
+	\section{Ekološke mreže i stabilnost zajednica}
+	Topologija mreža, otpornost, kaskadni učinci.
+	
+	\chapter{Modeli ekosustava i bioenergetika}
+	\section{Kruženje tvari i energije}
+	Bilance, tokovi i pretvorbe; biogeokemijski ciklusi.
+	\section{Bioenergetski i DEB modeli}
+	DEB teorija za protok energije i tvari kroz organizme; povezivanje s razinama bioraznolikosti.
+	\section{Ecosystem services}
+	Kvantifikacija usluga ekosustava i trade-off analize.
+	
+	% =====================================================
+	\part{Prostor, predviđanje i AI}
+	% =====================================================
+	
+	\chapter{Prostorno-ekološko modeliranje}
+	\section{GIS, daljinska istraživanja i skale}
+	Lokalna \textless{}1 km, krajobrazna 1--100 km, regionalna 100--1000 km, kontinentalna \textgreater{}1000 km.
+	\section{Modeli rasprostiranja vrsta (SDM/ENM)}
+	Klimatske varijable, bioklimatski slojevi, pristranost uzorkovanja.
+	\section{IBM modeli}
+	Individualno temeljeni pristupi i emergentna svojstva.
+	
+	\chapter{Prediktivno modeliranje i scenariji}
+	\section{Scenariji klimatskih promjena}
+	Korištenje scenarija (npr. SSP/RCP) u ekološkim projekcijama.
+	\section{Predviđanje invazija i rani sustavi upozorenja}
+	Integracija podataka nadzora i modela rizika; pragovi upozorenja.
+	\section{Spajanje mehanističkih i statističkih pristupa}
+	Hibridni modeli i kalibracija.
+	
+	\chapter{Statistički i AI pristupi}
+	\section{Klasična i Bayesovska statistika}
+	GLM/GLMM, MCMC, kredibilni intervali.
+	\section{Strojno učenje}
+	RF, XGBoost, SVM; značajke, regularizacija, unakrsna provjera.
+	\section{Duboko učenje i digitalni blizanci ekosustava}
+	Grafovi, konvolucijske i sekvencijske mreže; digital twins za \emph{what-if} scenarije.
+	
+	% =====================================================
+	\part{Validacija, nesigurnost i primjene}
+	% =====================================================
+	
+	\chapter{Validacija, verifikacija i osjetljivost}
+	\section{Kalibracija i verifikacija}
+	Podjela podataka, \emph{out-of-sample} procjene, nezavisni skupovi.
+	\section{Analize osjetljivosti i robustnosti}
+	Lokalne i globalne metode; Monte Carlo; propagacija nesigurnosti.
+	\section{Etika i komunikacija nesigurnosti}
+	Transparentnost i odgovornost modelara.
+	
+	\chapter{Primjene u upravljanju okolišem}
+	\section{Zaštita prirode i bioraznolikosti}
+	Prioritizacija očuvanja, planovi upravljanja.
+	\section{Poljoprivreda i šumarstvo}
+	Produktivnost, štetnici, otpornost agroekosustava.
+	\section{Ekotoksikologija i procjena rizika}
+	LC/EC metri\linebreak ke, PNEC, scenariji izloženosti; integracija s populacijskim modelima.
+	\section{Klimatske politike i održivi razvoj}
+	Podrška odlučivanju, socio-ekonomske poveznice.
+	
+	% =====================================================
+	\part{Studije slučaja i praktične vježbe}
+	% =====================================================
+	
+	\chapter{Studije slučaja}
+	\section{Gujavice u agroekosustavima}
+	Dobno strukturirani modeli, elastičnost i scenariji upravljanja.
+	\section{Širenje komaraca}
+	SDM + meteorološki pogonjeni prediktori; rani sustavi upozorenja.
+	\section{Eutrofikacija riječnog ekosustava}
+	Kutije (box) modeli i validacija na nizvodnim mjerenjima.
+	\section{Fragmentacija šuma i ptice metapopulacija}
+	Povezanost staništa i pragovi propusnosti krajolika.
+	\section{Bayesove mreže u ekotoksikologiji}
+	Kauzalni grafikoni i inverzna inferencija.
+	
+	\chapter{Praktične vježbe (\R{} i \Python{})}
+	\section{Uvod u \R{} i \Python{} alate}
+	Instalacija, radna okolina, reproducibilnost.
+	\section{Leslie matrica u \R{}}
+	\begin{lstlisting}[language=R,caption={Leslie matrica i projekcija populacije u R-u}]
+		F <- c(0, 0.3, 1.2, 1.5)
+		P <- c(0.6, 0.7, 0.8)
+		L <- matrix(c(F,
+		P[1],0,0,0,
+		0,P[2],0,0,
+		0,0,P[3],0), nrow=4, byrow=TRUE)
+		n0 <- c(50, 40, 20, 10)
+		proj <- function(L, n, t=20){
+			N <- matrix(NA, nrow=length(n), ncol=t+1)
+			N[,1] <- n
+			for(i in 1:t) N[,i+1] <- L %*% N[,i]
+			N
+		}
+		N <- proj(L, n0, t=30)
+		colSums(N) -> Tot
+		plot(Tot, type="l", xlab="Vrijeme", ylab="Uk. veličina")
+	\end{lstlisting}
+	
+	\section{Lotka--Volterra simulacija u \Python{}}
+	\begin{lstlisting}[language=Python,caption={Jednostavni LV model u Pythonu (scipy.integrate)}]
+		import numpy as np
+		from scipy.integrate import solve_ivp
+		import matplotlib.pyplot as plt
+		
+		def lv(t, z, r, a, e, m):
+		N, P = z
+		dN = r*N - a*N*P
+		dP = e*a*N*P - m*P
+		return [dN, dP]
+		
+		pars = dict(r=0.8, a=0.02, e=0.1, m=0.3)
+		sol = solve_ivp(lambda t,z: lv(t,z,**pars),
+		[0, 200], [40, 9], dense_output=True)
+		t = np.linspace(0,200,1000)
+		N, P = sol.sol(t)
+		plt.plot(t, N, label="Plijen")
+		plt.plot(t, P, label="Grabežljivac")
+		plt.xlabel("Vrijeme"); plt.ylabel("Gustoća"); plt.legend(); plt.show()
+	\end{lstlisting}
+	
+	\section{SDM u \R{} (skica s \texttt{dismo})}
+	\begin{lstlisting}[language=R,caption={SDM skica s bioklimatskim varijablama}]
+		library(dismo); library(raster)
+		# bioclim <- getData('worldclim', var='bio', res=10) # primjer dohvaćanja
+		# occ <- read.csv("occ_points.csv")  # popisi opažanja (lon, lat)
+		# m <- maxent(bioclim, occ)
+		# p <- predict(bioclim, m)
+		# plot(p)
+	\end{lstlisting}
+	
+	\section{Random Forest za invazije}
+	\begin{lstlisting}[language=R,caption={RF klasifikator s unakrsnom provjerom}]
+		library(tidymodels)
+		set.seed(1)
+		# df: response ~ predictors
+		split <- initial_split(df, prop=0.8, strata=response)
+		train <- training(split); test <- testing(split)
+		rf_spec <- rand_forest(trees=500) %>% set_engine("ranger") %>% set_mode("classification")
+		rec <- recipe(response ~ ., data=train) %>% step_zv(all_predictors())
+		wf <- workflow() %>% add_model(rf_spec) %>% add_recipe(rec)
+		res <- wf %>% fit_resamples(vfold_cv(train, v=5, strata=response), metrics=metric_set(roc_auc,accuracy))
+		collect_metrics(res)
+	\end{lstlisting}
+	
+	\section{DEB simulacije (skica)}
+	\begin{lstlisting}[language=R,caption={Minimalna DEB skica (konceptualno)}]
+		# Ovo je conceptual stub: definirajte parametre i tokove E, V...
+		pars <- list(p_Am=1, v=0.02, kappa=0.8)
+		state <- c(E=1, V=0.1)
+		deb_model <- function(t, y, p){
+			with(as.list(c(y,p)), {
+				dE <- p_Am - v*E
+				dV <- kappa*v*E - 0.01*V
+				list(c(dE,dV))
+			})
+		}
+		# solve s deSolve::ode(...)
+	\end{lstlisting}
+	
+	% =====================================================
+	\appendix
+	% =====================================================
+	
+	\chapter{Matematički prilozi}
+	\section{Osnovni populacijski modeli}
+	Sažeti popis formula (eksponencijalni, logistički, Ricker, Beverton--Holt).
+	
+	\chapter{Instalacija softvera}
+	Upute za \R/\Python{} okruženja, pakete i reproducibilnost.
+	
+	\chapter{Primjeri koda}
+	Proširene skripte za poglavlja iz \emph{Praktičnih vježbi}.
+	
+	\chapter{Rječnik pojmova}
+	Bioraznolikost, nosivost staništa, metapopulacija, ekološka niša, stohastičnost.
+	
+	\backmatter
+	\printbibliography
+	
+\end{document}
